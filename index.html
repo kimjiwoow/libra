@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>천칭자리 결과</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #45357D;
+      font-family: 'Pretendard', sans-serif;
+      color: #fff;
+      padding: 40px 16px 100px;
+    }
+    .container {
+      width: 100%;
+      max-width: 485px;
+      margin: 0 auto;
+    }
+    .header { text-align: center; margin-bottom: 32px; }
+    .header img { width: 180px; margin-bottom: 12px; }
+    .header h1 { font-size: 22px; font-weight: 700; color: #FFD579; }
+    .header p { font-size: 14px; color: #FFD579; margin-top: 4px; }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card.myth {
+      background-color: #45357D;
+      border: none;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      color: #FFEA92;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-left: 8px;
+      padding-bottom: 4px;
+      border-left: 3px solid #ffea92;
+    }
+
+    .card h2::before { content: '✨'; margin-right: 8px; }
+    .card p { font-size: 14px; line-height: 1.8; }
+
+    .highlight { color: #FFD579; font-weight: bold; }
+    .good { color: #56bad6; font-weight: bold; }
+    .bad { color: #FFC0CB; font-weight: bold; }
+    .spaced { margin-top: 14px; }
+
+    .extra-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .sub-button {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
+
+    .sub-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px 3px #fff;
+      transform: translateY(-1px);
+    }
+
+    .coordi-toggle {
+      margin-top: 8px;
+      font-size: 20px;
+      color: #FFD579;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, text-shadow 0.3s;
+    }
+
+    .coordi-toggle:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 8px #FFD579;
+    }
+
+    .coordi-img {
+      display: none;
+      margin-top: 12px;
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://i.imgur.com/QHkNX0r.png" alt="천칭자리 캐릭터">
+      <h1>⚖️ 천칭자리 ⚖️</h1>
+      <p>9월 24일 ~ 10월 22일</p>
+    </div>
+
+    <div class="card myth">
+      <h2>신화 소개</h2>
+      <p>천칭자리는 정의의 여신 아스트레아가 가지고 다니던 정의의 저울대로 알려져 있다. 이 저울대는 인간의 선악을 재어 운명을 결정하는데 쓰여지던 것으로 정의와 공평을 위해 봉사한 아스트레아의 공적을 기리기 위하여 하늘에 올려졌다고 한다.</p>
+      <p class="spaced"><span class="highlight">유명인:</span> BTS 지민, 수지, 현빈, 서강준, 보이넥스트도어 리우</p>
+    </div>
+
+    <div class="card">
+      <h2>성격</h2>
+      <p>유쾌하고 매너 좋은 천칭자리는 인간관계의 달인이다. 분위기를 살릴 줄 알고, 외모나 미적 감각이 뛰어나며, 사랑받는 것을 즐긴다.</p>
+      <p>갈등은 피하려고 하고, 모든 것을 조화롭게 만들려 한다. 하지만 우유부단하고 결정 장애가 있는 경우도 많아 중요한 순간엔 망설이는 경향이 있다.</p>
+      <p>겉으론 가볍고 즐거운 척하지만 내면은 외로움과 불안을 품고 있으며, 진심을 보여주는 데는 시간이 필요하다.</p>
+    </div>
+
+    <div class="card">
+      <h2>궁합</h2>
+      <p><span class="good">좋은 궁합:</span> 물병자리, 쌍둥이자리, 사자자리<br>
+         <span class="bad">나쁜 궁합:</span> 전갈자리, 물고기자리</p>
+      <p class="spaced">세련되고 사교적인 천칭자리는 대화를 통해 관계를 풀어나가고, 조화를 중시하는 평화주의자다.</p>
+      <p>물병자리, 쌍둥이자리와는 대화와 사고방식이 잘 맞아 자연스럽게 끌리는 관계를 맺는다. 사자자리와도 서로를 존중하며 밝고 멋진 커플이 되기 쉽다.</p>
+      <p>반면 감정이 무겁고 직설적인 전갈자리, 예민하고 감성적인 물고기자리와는 감정 조율에 애를 먹을 수 있다.</p>
+    </div>
+
+    <div class="card">
+      <h2>TIP</h2>
+      <p><span class="good">참고할 것:</span> 기존 친구나 연인 관계는 아주 좋고 사람들과 함께 시간을 보내며 스트레스를 풀고 즐거움을 느낄 수 있는 주간입니다.</p>
+      <p><span class="bad">주의할 것:</span> 일과 돈 때문에 스트레스가 심하고 계획대로 되지 않으며, 외부 활동이나 혼자 하는 충동적인 쇼핑은 피하는 것이 좋겠습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>행운 정보</h2>
+      <p><span class="highlight">행운의 숫자:</span> 8, 7<br>
+         <span class="highlight">행운의 색상:</span> 파란색, 분홍색<br>
+         <span class="highlight">행운의 자음:</span> ㅌ, ㅎ<br>
+         <span class="highlight">베스트 운동:</span> 맨손체조 / 근력운동 / 수영<br>
+         <span class="highlight">행운의 장소:</span> 갤러리, 뷰티샵, 디자인 스튜디오 → 미적 감각을 자극하는 공간에서 기분 전환과 행운이 따라옵니다.<br>
+         <span class="highlight">행운의 아이템:</span> 복권<br>
+         <span class="highlight">행운의 코디:</span> 파스텔 상의 + 톤온톤 팬츠 + 실버 액세서리</p>
+      <button id="toggleBtn" class="coordi-toggle" onclick="toggleCoordi()">+</button>
+      <img id="coordiImage" class="coordi-img" src="https://i.imgur.com/mVSRsKc.png" alt="행운의 코디  이미지">
+    </div>
+  </div>
+
+   <div class="extra-buttons">
+
+  <button class="sub-button" onclick="location.href='https://kimjiwoow.github.io/write-/'">뒤로가기</button>
+  
+  <button class="sub-button" onclick="location.href='https://kimjiwoow.github.io/write-/'">포춘카드 뽑기</button>
+</div>
+  <script>
+    function toggleCoordi() {
+      const img = document.getElementById("coordiImage");
+      const button = document.getElementById("toggleBtn");
+
+      if (img.style.display === "block") {
+        img.style.display = "none";
+        button.innerText = "+";
+      } else {
+        img.style.display = "block";
+        button.innerText = "–";
+      }
+    }
+  </script>
+</body>
+</html>
